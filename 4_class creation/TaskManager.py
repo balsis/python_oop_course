@@ -22,22 +22,15 @@ class TaskManager:
         self.task_list = task_list
 
     def mark_done(self, task):
-        for task in self.task_list.tasks:
-            if task.name == task.name:
-                task.status = True
-                break
+        task.status = True
 
     def mark_undone(self, task):
-        self.task = task
-        for task in self.task_list.tasks:
-            if task.name == task.name:
-                task.status = False
-                break
+        task.status = False
 
     def show_tasks(self):
         for i in self.task_list.tasks:
             if i is not None and hasattr(i, 'name'):
-                print(i.display())
+                i.display()
 # Ниже код для проверки классов Task, TaskList и TaskManager
 
 # Создаем список задач
